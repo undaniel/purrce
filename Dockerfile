@@ -31,6 +31,11 @@ RUN apk add --no-cache curl tar && \
 # Stage 3: Build backend
 FROM rust:1.98-slim-bookworm AS backend-builder
 
+# Limit build parallelism to avoid OOM on machines with ~11 GB RAM
+# (the full dependency graph includes BoringSSL/cmake and is memory-hungry).
+ENV CARGO_BUILD_JOBS=3 \
+    CMAKE_BUILD_PARALLEL_LEVEL=2
+
 # cmake/clang/perl are required to build BoringSSL (btls-sys), pulled in by the
 # impersonating HTTP client (wreq).
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -59,6 +64,7 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=obscura-downloader /usr/local/bin/obscura* /usr/local/bin/

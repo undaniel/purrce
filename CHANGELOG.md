@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-09-13
+
+### Fixed
+
+- Container healthcheck failing because `wget` was missing from the final image.
+- Backend build running out of memory (OOM) on machines with ~11 GB RAM; build parallelism is now limited.
+
 ## [1.0.0] - 2026-09-13
 
 First public release.
@@ -38,5 +45,6 @@ First public release.
 - Container isolation with an unprivileged user.
 - PostgreSQL is not published outside the Docker network by default.
 
-[Unreleased]: https://github.com/undaniel/purrce/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/undaniel/purrce/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/undaniel/purrce/releases/tag/v1.0.1
 [1.0.0]: https://github.com/undaniel/purrce/releases/tag/v1.0.0
