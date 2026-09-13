@@ -283,7 +283,7 @@ El `docker-compose.yml` del repositorio usa `build: .` para desarrollo. Para pro
            └───────────┘
 ```
 
-El Dockerfile es multi-etapa y compatible con `x86_64` (amd64) y `aarch64` (arm64).
+La imagen Docker se publica para `linux/amd64`.
 
 ## Stack
 

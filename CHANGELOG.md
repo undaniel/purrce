@@ -29,7 +29,7 @@ First public release.
 - **Material 3 Expressive UI**: floating navigation rail, mobile toolbar, buttons, inputs, dialogs, cards, badges, tables, and type scale.
 - **Light/dark theme** and responsive design.
 - **Favicon** with the brand identity.
-- **Unified Docker image** (backend + frontend + Obscura) compatible with amd64 and arm64, with a healthcheck.
+- **Unified Docker image** (backend + frontend + Obscura) for `linux/amd64`, with a healthcheck.
 - **Automatic database migrations** on startup.
 
 ### Security
