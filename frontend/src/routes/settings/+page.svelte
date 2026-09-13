@@ -293,6 +293,6 @@
     <p class="text-[13px] text-[var(--fg-muted)] leading-relaxed">
       {$t('settings.aboutText')}
     </p>
-    <p class="num text-[11px] text-[var(--fg-muted)] mt-3">{$t('settings.version', { version: '0.1.0' })}</p>
+    <p class="num text-[11px] text-[var(--fg-muted)] mt-3">{$t('settings.version', { version: '1.0.0' })}</p>
   </div>
 </div>

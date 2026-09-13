@@ -7,17 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-### Added
-
-- Self-hosting documentation with Docker Hub and data backup instructions.
-- Screenshots section in the README (`docs/screenshots/`).
-
-## [0.1.0] - 2026-09-13
+## [1.0.0] - 2026-09-13
 
 First public release.
 
 ### Added
 
+- Self-hosting documentation with Docker Hub and data backup instructions.
+- Screenshots section in the README (`docs/screenshots/`).
 - **Price tracking**: import products by URL, keep price history, and compare prices across stores.
 - **Buy signals**: detect historical lows, range position, and savings versus the average.
 - **Alerts**: threshold-based and percentage-change based.
@@ -41,5 +38,5 @@ First public release.
 - Container isolation with an unprivileged user.
 - PostgreSQL is not published outside the Docker network by default.
 
-[Unreleased]: https://github.com/undaniel/purrce/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/undaniel/purrce/releases/tag/v0.1.0
+[Unreleased]: https://github.com/undaniel/purrce/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/undaniel/purrce/releases/tag/v1.0.0
