@@ -1,0 +1,5 @@
+{
+  "taginput.remove": "Eliminar tag {name}",
+  "taginput.placeholder": "Escribe para buscar o crear tags...",
+  "taginput.create": "Crear"
+}

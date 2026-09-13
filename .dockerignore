@@ -1,0 +1,35 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+LICENSE
+
+# Environment
+.env
+.env.example
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.yml
+
+# Node
+frontend/node_modules
+frontend/.svelte-kit
+
+# Rust
+backend/target
+
+# Build artifacts
+frontend/build
+*.log

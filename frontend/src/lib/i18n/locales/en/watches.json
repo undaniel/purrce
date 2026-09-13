@@ -1,0 +1,18 @@
+{
+  "watches.pageTitle": "Watches · Purrce",
+  "watches.subtitle": "{count} active and scheduled watches",
+  "watches.loadError": "Error loading watches",
+  "watches.deleteConfirm": "Delete this watch?",
+  "watches.emptyTitle": "No watches",
+  "watches.emptyMessage": "Watches are created automatically when you add products",
+  "watches.fallbackName": "Watch {id}",
+  "watches.outOfStock": "Out of stock",
+  "watches.every": "every {hours}h",
+  "watches.checking": "Checking…",
+  "watches.resuming": "Resuming…",
+  "watches.resume": "Resume",
+  "watches.openInStore": "Open in store",
+  "watches.checkNow": "Check now",
+  "watches.pause": "Pause",
+  "watches.activate": "Activate"
+}

@@ -1,0 +1,10 @@
+{
+  "signal.buy": "Buy",
+  "signal.fair": "Fair price",
+  "signal.high": "High price",
+  "signal.unknown": "No history",
+  "signal.reason.historicalLow": "Historical low",
+  "signal.reason.nearLow": "Near the low · {percent}% of range",
+  "signal.reason.waitDrop": "Better to wait for a drop",
+  "signal.reason.usual": "Usual price of the product"
+}

@@ -1,0 +1,7 @@
+[build]
+# ponytail: lld ~2x más rápido que el linker MSVC en dev
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+[profile.dev]
+opt-level = 0
+debug = 1  # line tables only, menos I/O que debug=2

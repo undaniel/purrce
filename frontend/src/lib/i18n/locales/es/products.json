@@ -1,0 +1,9 @@
+{
+  "products.pageTitle": "Productos · Purrce",
+  "products.searchPlaceholder": "Buscar productos…",
+  "products.allTags": "Todos",
+  "products.emptyNoProducts": "Agrega tu primer producto desde el dashboard",
+  "products.emptyFilteredSearch": "No se encontraron productos con \"{query}\"",
+  "products.emptyFilteredTag": "No se encontraron productos con el tag \"{tag}\"",
+  "products.emptyFilteredSearchTag": "No se encontraron productos con \"{query}\" y el tag \"{tag}\""
+}

@@ -1,0 +1,18 @@
+{
+  "watches.pageTitle": "Monitoreos · Purrce",
+  "watches.subtitle": "{count} monitoreos activos y programados",
+  "watches.loadError": "Error al cargar monitoreos",
+  "watches.deleteConfirm": "¿Eliminar este monitoreo?",
+  "watches.emptyTitle": "Sin monitoreos",
+  "watches.emptyMessage": "Los monitoreos se crean automáticamente al agregar productos",
+  "watches.fallbackName": "Monitoreo {id}",
+  "watches.outOfStock": "Sin stock",
+  "watches.every": "cada {hours}h",
+  "watches.checking": "Verificando…",
+  "watches.resuming": "Reanudando…",
+  "watches.resume": "Reanudar",
+  "watches.openInStore": "Abrir en la tienda",
+  "watches.checkNow": "Verificar ahora",
+  "watches.pause": "Pausar",
+  "watches.activate": "Activar"
+}

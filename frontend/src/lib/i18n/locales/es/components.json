@@ -1,0 +1,21 @@
+{
+  "chart.historyTitle": "Historial de precios",
+  "chart.comparison": "Comparación entre {count} tiendas",
+  "chart.min": "Mín",
+  "chart.max": "Máx",
+  "chart.avg": "Prom",
+  "chart.records": "{count} registros",
+  "chart.noData": "Sin datos de historial en este rango",
+  "chart.minLine": "mín {price}",
+  "chart.maxLine": "máx {price}",
+  "history.title": "Timeline de cambios",
+  "history.empty": "Sin registros de precio todavía.",
+  "timefilter.1y": "1a",
+  "timefilter.all": "Todo",
+  "range.min": "mín {price}",
+  "range.max": "máx {price}",
+  "captcha.title": "CAPTCHA detectado",
+  "captcha.message": "La página requiere verificación manual. Resuelve el CAPTCHA en el navegador y luego haz clic en continuar.",
+  "captcha.continue": "Continuar monitoreo",
+  "loading.default": "Cargando…"
+}

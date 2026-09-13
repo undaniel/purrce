@@ -1,0 +1,10 @@
+{
+  "signal.buy": "Comprar",
+  "signal.fair": "Precio justo",
+  "signal.high": "Precio alto",
+  "signal.unknown": "Sin historial",
+  "signal.reason.historicalLow": "Mínimo histórico",
+  "signal.reason.nearLow": "Cerca del mínimo · {percent}% del rango",
+  "signal.reason.waitDrop": "Conviene esperar una baja",
+  "signal.reason.usual": "Precio habitual del producto"
+}

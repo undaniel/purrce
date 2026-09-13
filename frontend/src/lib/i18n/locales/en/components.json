@@ -1,0 +1,21 @@
+{
+  "chart.historyTitle": "Price history",
+  "chart.comparison": "Comparison across {count} stores",
+  "chart.min": "Min",
+  "chart.max": "Max",
+  "chart.avg": "Avg",
+  "chart.records": "{count} records",
+  "chart.noData": "No history data in this range",
+  "chart.minLine": "min {price}",
+  "chart.maxLine": "max {price}",
+  "history.title": "Change timeline",
+  "history.empty": "No price records yet.",
+  "timefilter.1y": "1y",
+  "timefilter.all": "All",
+  "range.min": "min {price}",
+  "range.max": "max {price}",
+  "captcha.title": "CAPTCHA detected",
+  "captcha.message": "The page requires manual verification. Solve the CAPTCHA in the browser and then click continue.",
+  "captcha.continue": "Continue tracking",
+  "loading.default": "Loading…"
+}

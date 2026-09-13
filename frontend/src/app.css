@@ -1,0 +1,514 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    /* Backgrounds — light: warm neutral */
+    --bg: #fbfaf9;
+    --bg-subtle: #f4f3f1;
+    --bg-elevated: #ffffff;
+
+    --fg: #191714;
+    --fg-secondary: #57534e;
+    /* muted oscurecido para cumplir contraste AA sobre fondos claros */
+    --fg-muted: #78716c;
+    --fg-faint: #a8a29e;
+
+    --card: #ffffff;
+    --card-hover: #fbfaf9;
+
+    --border: #e7e5e4;
+    --border-subtle: #f1efed;
+    --border-strong: #d6d3d1;
+
+    /* Brand — amber: precio, oportunidad, energía */
+    --accent: #e8590c;
+    --accent-hover: #c2410c;
+    --accent-fg: #ffffff;
+    --accent-subtle: #fff4ec;
+    --accent-muted: #ffd8bf;
+
+    /* Semantic — solo con significado */
+    --success: #15803d;
+    --success-subtle: #f0fdf4;
+    --success-muted: #bbf7d0;
+    --danger: #b91c1c;
+    --danger-subtle: #fef2f2;
+    --danger-muted: #fecaca;
+    --warning: #b45309;
+    --warning-subtle: #fffbeb;
+    --warning-muted: #fde68a;
+    --info: #1d4ed8;
+    --info-subtle: #eff6ff;
+
+    /* Radius */
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    /* Shadows — sutiles, funcionales */
+    --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.05);
+    --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.06), 0 1px 3px rgba(28, 25, 23, 0.04);
+    --shadow-md: 0 2px 6px -1px rgba(28, 25, 23, 0.07), 0 2px 4px -2px rgba(28, 25, 23, 0.05);
+    --shadow-lg: 0 8px 24px -4px rgba(28, 25, 23, 0.10), 0 2px 6px -3px rgba(28, 25, 23, 0.06);
+    --shadow-xl: 0 20px 40px -8px rgba(28, 25, 23, 0.16), 0 6px 12px -6px rgba(28, 25, 23, 0.08);
+
+    /* Shape — escala M3 Expressive */
+    --radius-xs: 4px;
+    --radius-2xl: 20px;
+    --radius-3xl: 28px;
+    --radius-full: 9999px;
+
+    /* Superficies tonales M3 */
+    --surface-container: #f4f3f1;
+    --surface-container-high: #eeedea;
+    --surface-vibrant: #fff4ec;
+
+    /* Motion — M3 Expressive */
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+    --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+    --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-spring-soft: cubic-bezier(0.22, 1.2, 0.36, 1);
+  }
+
+  .dark {
+    --bg: #0d0b0a;
+    --bg-subtle: #171412;
+    --bg-elevated: #1c1917;
+
+    --fg: #fafaf9;
+    --fg-secondary: #d6d3d1;
+    --fg-muted: #a8a29e;
+    --fg-faint: #78716c;
+
+    --card: #171412;
+    --card-hover: #1c1917;
+
+    --border: #292524;
+    --border-subtle: #211e1c;
+    --border-strong: #44403c;
+
+    --accent: #fb923c;
+    --accent-hover: #f97316;
+    --accent-fg: #1c1917;
+    --accent-subtle: rgba(251, 146, 60, 0.12);
+    --accent-muted: rgba(251, 146, 60, 0.28);
+
+    --success: #4ade80;
+    --success-subtle: rgba(74, 222, 128, 0.10);
+    --success-muted: rgba(74, 222, 128, 0.24);
+    --danger: #f87171;
+    --danger-subtle: rgba(248, 113, 113, 0.10);
+    --danger-muted: rgba(248, 113, 113, 0.24);
+    --warning: #fbbf24;
+    --warning-subtle: rgba(251, 191, 36, 0.10);
+    --warning-muted: rgba(251, 191, 36, 0.24);
+    --info: #60a5fa;
+    --info-subtle: rgba(96, 165, 250, 0.10);
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55), 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.65), 0 8px 16px rgba(0, 0, 0, 0.45);
+
+    --surface-container: #171412;
+    --surface-container-high: #211d1a;
+    --surface-vibrant: rgba(251, 146, 60, 0.12);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  * { border-color: var(--border); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--border-strong);
+    border-radius: 9999px;
+  }
+
+  input:focus, select:focus, textarea:focus { outline: none; }
+
+  button, a, [role="button"] { cursor: pointer; }
+  button:disabled, [disabled] { cursor: not-allowed; }
+}
+
+@layer components {
+  /* ─── Números — siempre monoespaciados y tabulares ────────── */
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    letter-spacing: -0.02em;
+  }
+
+  .price-number {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: var(--fg);
+  }
+
+  .price-cell {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  /* ─── Cards — M3 Expressive (radio grande + elevación suave) ─ */
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xs);
+  }
+
+  .card-interactive {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xs);
+    transition: border-color 0.2s var(--ease-standard),
+      background 0.2s var(--ease-standard),
+      transform 0.4s var(--ease-spring),
+      box-shadow 0.25s var(--ease-standard);
+  }
+  .card-interactive:hover {
+    border-color: var(--border);
+    background: var(--card-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  .card-interactive:active {
+    transform: translateY(-1px) scale(0.99);
+  }
+
+  /* Estado de recarga: conserva el contenido visible en vez de vaciarlo */
+  .refreshing {
+    opacity: 0.55;
+    filter: saturate(0.85);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  /* ─── Botones — M3 Expressive (pill + spring) ─────────────── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5625rem 1.125rem;
+    min-height: 40px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    line-height: 1.25;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: background-color 0.2s var(--ease-standard),
+      border-color 0.2s var(--ease-standard),
+      color 0.2s var(--ease-standard),
+      opacity 0.15s ease,
+      transform 0.32s var(--ease-spring),
+      box-shadow 0.2s var(--ease-standard);
+  }
+  .btn:disabled { opacity: 0.5; }
+  .btn:active:not(:disabled) { transform: scale(0.95); }
+
+  /* Botones de icono y controles sueltos */
+  .pressable {
+    transition: transform 0.3s var(--ease-spring), background-color 0.15s ease,
+      color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  }
+  .pressable:active:not(:disabled) { transform: scale(0.9); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--accent-hover);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border-color: var(--border-strong);
+    color: var(--fg-secondary);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background: var(--bg-subtle);
+    color: var(--fg);
+    border-color: var(--border-strong);
+  }
+
+  .btn-ghost { color: var(--fg-muted); }
+  .btn-ghost:hover:not(:disabled) {
+    color: var(--fg);
+    background: var(--bg-subtle);
+  }
+
+  .btn-danger {
+    background: var(--danger);
+    color: #fff;
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-danger:hover:not(:disabled) {
+    box-shadow: var(--shadow-md);
+    filter: brightness(1.05);
+  }
+
+  .btn-sm { padding: 0.375rem 0.75rem; min-height: 32px; font-size: 12px; }
+
+  /* ─── Badges — M3 chips (pill) ────────────────────────────── */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.3rem 0.625rem;
+    border-radius: var(--radius-full);
+  }
+  .badge-down { color: var(--success); background: var(--success-subtle); }
+  .badge-up { color: var(--danger); background: var(--danger-subtle); }
+  .badge-neutral { color: var(--fg-muted); background: var(--bg-subtle); }
+  .badge-accent { color: var(--accent); background: var(--accent-subtle); }
+
+  /* ─── Inputs — M3 filled field ────────────────────────────── */
+  .input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    background: var(--surface-container);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    font-size: 14px;
+    color: var(--fg);
+    transition: background-color 0.2s var(--ease-standard),
+      border-color 0.2s var(--ease-standard),
+      box-shadow 0.2s var(--ease-standard);
+  }
+  .input::placeholder { color: var(--fg-muted); }
+  .input:hover:not(:focus) {
+    background: var(--surface-container-high);
+    border-color: var(--border-strong);
+  }
+  .input:focus {
+    background: var(--bg-elevated);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-subtle);
+  }
+
+  /* ─── Tipografía — escala M3 Expressive ───────────────────── */
+  .page-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--fg);
+  }
+
+  .title-md {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  .title-sm {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+
+  /* ─── Etiquetas ───────────────────────────────────────────── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  /* ─── Tabla — M3 Expressive ───────────────────────────────── */
+  .table-row-hover { transition: background 0.18s var(--ease-standard); }
+  .table-row-hover:hover { background: var(--surface-container); }
+
+  .table-head {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    background: var(--surface-container);
+  }
+}
+
+/* ─── Animaciones ───────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes price-flash {
+  0%   { background-color: var(--accent-subtle); }
+  100% { background-color: transparent; }
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes nav-progress {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@layer components {
+  .animate-in { animation: fade-up 0.3s ease both; }
+  .price-flash { animation: price-flash 1.6s ease-out; }
+  .animate-toast { animation: toast-in 0.25s ease both; }
+
+  /* Barra de progreso indeterminada durante la navegación */
+  .nav-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 80;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .nav-progress::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    animation: nav-progress 1s ease-in-out infinite;
+  }
+}
+
+/* ─── Navegación flotante — Material 3 Expressive ─────────────── */
+@layer components {
+  .m3-rail {
+    transition: width 0.42s var(--ease-spring), box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: width;
+  }
+
+  .m3-surface {
+    background: color-mix(in srgb, var(--bg-elevated) 86%, transparent);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .m3-toolbar {
+    background: color-mix(in srgb, var(--bg-elevated) 82%, transparent);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Diálogo — M3 Expressive */
+  .m3-dialog {
+    background: var(--surface-container-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-xl);
+  }
+  .m3-scrim {
+    background: color-mix(in srgb, #000 38%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .m3-item {
+    transition: background-color 0.22s var(--ease-standard),
+      color 0.22s var(--ease-standard),
+      transform 0.32s var(--ease-spring);
+  }
+  .m3-item:active { transform: scale(0.96); }
+
+  .m3-icon {
+    transition: background-color 0.28s var(--ease-emphasized),
+      color 0.22s var(--ease-standard),
+      transform 0.4s var(--ease-spring);
+  }
+
+  /* Etiquetas que colapsan su ancho con el rail (morph 0fr → 1fr) */
+  .m3-label {
+    transition: grid-template-columns 0.42s var(--ease-spring),
+      opacity 0.2s var(--ease-standard),
+      transform 0.42s var(--ease-spring);
+  }
+  .m3-collapsed .m3-label {
+    opacity: 0;
+    transform: translateX(-6px);
+    pointer-events: none;
+  }
+}
+
+/* El contenido reserva el ancho del rail para no quedar tapado */
+@media (min-width: 1024px) {
+  .app-main {
+    padding-left: calc(var(--rail-w, 4.75rem) + 2.25rem);
+    transition: padding-left 0.42s var(--ease-spring);
+  }
+}
+
+/* ─── Accesibilidad: respetar preferencia de movimiento reducido ─── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

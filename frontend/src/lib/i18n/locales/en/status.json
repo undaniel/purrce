@@ -1,0 +1,8 @@
+{
+  "status.ACTIVE": "Active",
+  "status.CHECKING": "Checking",
+  "status.ERROR": "Error",
+  "status.CAPTCHA_REQUIRED": "CAPTCHA",
+  "status.BLOCKED": "Blocked",
+  "status.DISABLED": "Disabled"
+}
